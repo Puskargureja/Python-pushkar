@@ -67,7 +67,7 @@ for department in departments:
         print(f"\nDepartment: {department}")
         department_employees = [employee for employee in employees if employee['department'] == department]
         total_salary = sum(employee['salary'] for employee in department_employees)
-        for employee in department_employees:
+        for employee in department_employees
             print(
                 f"ID: {employee['id']}, Name: {employee['name']}, Date of Birth: {employee['dob']}, Salary: {employee['salary']}, Total Salary for Department: {total_salary}")
 def get_departments():
@@ -76,8 +76,8 @@ def get_departments():
 
 def get_employees():
     return [
-        {"id": 1, "name": "John Doe", "department": "Manager", "dob": "1980-05-15", "salary": 160000},
-        {"id": 2, "name": "Jane Smith", "department": "Engineer", "dob": "1975-12-20", "salary": 90000},
+        {"id": 1, "name": "Jane Doe", "department": "Manager", "dob": "1980-05-15", "salary": 160000},
+        {"id": 2, "name": "John Smith", "department": "Engineer", "dob": "1975-12-20", "salary": 90000},
         {"id": 3, "name": "Alice Johnson", "department": "Analyst", "dob": "1990-08-10", "salary": 75000},
     ]
 
