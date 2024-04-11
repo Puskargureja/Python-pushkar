@@ -89,6 +89,7 @@ def calculate_department_stats(employees, department):
     return avg_age, avg_salary
 
 
+
 def get_age(date_of_birth):
     import datetime
     today = datetime.date.today()
