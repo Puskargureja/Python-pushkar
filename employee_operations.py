@@ -5,13 +5,13 @@ This module provides functions for adding, deleting, and updating employee infor
 """
 
 def add_employee():
-    id = int(input("please enter the ID for the new employee:")
-    firstName = input("please enter the employee's firstname")
-    last_name = input("please enter the employee's lastname")
-    date_of_birth = input("please enter the employee's date of birth in YYYY/MM/DD")
-    start_of_year = int(input("please enter the employee's starting year")
-    position = input("please enter the employee's position")
-    salary = float(input("please enter the employee's salary")
+    id_number = int(input("enter the ID for the new employee:: ")
+    firstName = input("enter the employee's firstname:: ")
+    last_name = input(" enter the employee's lastname:: ")
+    date_of_birth = input("enter the employee's date of birth in YYYY/MM/DD:: ")
+    start_of_year = int(input("enter the employee's starting year:: ")
+    position = input("enter the employee's position:: ")
+    salary = float(input("enter the employee's salary:: ")
     """
     Add Employee Function
 
@@ -50,33 +50,33 @@ for department in departments:
     for employee in employees:
         print(f"ID: {employee['id']}, Name: {employee['name']}, Department: {employee['department']}")
         
-        print("\nList of Departments with Average Age and Salary:")
+        print("\nList of Departments with Average Age and Pay:")
     
 def calculate_department_stats(employees, department):
     pass
 
 
 for department in departments:
-        avg_age, avg_salary = calculate_department_stats(employees, department)
-print(f"Department: {department}, Average Age: {avg_age}, Average Salary: {avg_salary}")
+        avg_age, avg_pay = calculate_department_stats(employees, department)
+print(f"Department: {department}, Average Age: {avg_age}, Average Pay: {avg_pay}")
 
 print("\nEmployees in Each Department:")
 for department in departments:
         print(f"\nDepartment: {department}")
         department_employees = [employee for employee in employees if employee['department'] == department]
-        total_salary = sum(employee['salary'] for employee in department_employees)
+        total_pay = sum(employee['salary'] for employee in department_employees)
         for employee in department_employees
             print(
                 f"ID: {employee['id']}, Name: {employee['name']}, Date of Birth: {employee['dob']}, Salary: {employee['salary']}, Total Salary for Department: {total_salary}")
 def get_departments():
-    return ["Analyst", "Engineer", "Manager"]
+    return ["Analyst", "Developer", "Engineer"]
 
 
 def get_employees():
     return [
-        {"id": 1, "name": "Jane Doe", "department": "Manager", "dob": "1980-05-15", "salary": 160000},
-        {"id": 2, "name": "John Smith", "department": "Engineer", "dob": "1975-12-20", "salary": 90000},
-        {"id": 3, "name": "Alice Johnson", "department": "Analyst", "dob": "1990-08-10", "salary": 75000},
+        {"id": 1, "name": "Steven", "department": "Analyst", "dob": "1970-05-15", "pay": 150000},
+        {"id": 2, "name": "Wisdom", "department": "Developer", "dob": "1985-12-20", "pay": 80000},
+        {"id": 3, "name": "Peter parker", "department": "Engineer", "dob": "1980-08-10", "pay": 120000},
     ]
 
 
@@ -85,8 +85,8 @@ def calculate_department_stats(employees, department):
     if len(department_employees) == 0:
         return 0, 0
     avg_age = sum(get_age(employee['dob']) for employee in department_employees) / len(department_employees)
-    avg_salary = sum(employee['salary'] for employee in department_employees) / len(department_employees)
-    return avg_age, avg_salary
+    avg_pay = sum(employee['pay'] for employee in department_employees) / len(department_employees)
+    return avg_age, avg_pay
 
 
 
