@@ -11,7 +11,7 @@ def add_employee():
     date_of_birth = input("enter the employee's date of birth in YYYY/MM/DD:: ")
     start_of_year = int(input("enter the employee's starting year:: ")
     position = input("enter the employee's position:: ")
-    salary = float(input("enter the employee's salary:: ")
+    pay = float(input("enter the employee's pay:: ")
     """
     Add Employee Function
 
@@ -52,12 +52,12 @@ for department in departments:
         
         print("\nList of Departments with Average Age and Pay:")
     
-def calculate_department_stats(employees, department):
+def compute_department_stats(employees, department):
     pass
 
 
 for department in departments:
-        avg_age, avg_pay = calculate_department_stats(employees, department)
+        avg_age, avg_pay = compute_department_stats(employees, department)
 print(f"Department: {department}, Average Age: {avg_age}, Average Pay: {avg_pay}")
 
 print("\nEmployees in Each Department:")
@@ -67,20 +67,20 @@ for department in departments:
         total_pay = sum(employee['salary'] for employee in department_employees)
         for employee in department_employees
             print(
-                f"ID: {employee['id']}, Name: {employee['name']}, Date of Birth: {employee['dob']}, Salary: {employee['salary']}, Total Salary for Department: {total_salary}")
+                f"ID: {employee['id']}, Name: {employee['name']}, Date of Birth: {employee['dob']}, Salary: {employee['pay']}, Total Pay for Department: {total_pay}")
 def get_departments():
     return ["Analyst", "Developer", "Engineer"]
 
 
 def get_employees():
     return [
-        {"id": 1, "name": "Steven", "department": "Analyst", "dob": "1970-05-15", "pay": 150000},
-        {"id": 2, "name": "Wisdom", "department": "Developer", "dob": "1985-12-20", "pay": 80000},
-        {"id": 3, "name": "Peter parker", "department": "Engineer", "dob": "1980-08-10", "pay": 120000},
+        {"id": 1, "name": "Steven", "department": "Analyst", "dob": "1970-12-18", "pay": 150000},
+        {"id": 2, "name": "Wisdom", "department": "Developer", "dob": "1985-04-23", "pay": 80000},
+        {"id": 3, "name": "Peter parker", "department": "Engineer", "dob": "1980-08-28", "pay": 120000},
     ]
 
 
-def calculate_department_stats(employees, department):
+def compute_department_stats(employees, department):
     department_employees = [employee for employee in employees if employee['department'] == department]
     if len(department_employees) == 0:
         return 0, 0
